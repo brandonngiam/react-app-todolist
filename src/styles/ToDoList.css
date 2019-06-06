@@ -8,3 +8,11 @@ ul {
   padding: 1rem 0;
   font-size: 2em;
 }
+
+.todo-in-focus {
+  background-color: rgb(230, 245, 255);
+}
+
+.done {
+  text-decoration: line-through;
+}
