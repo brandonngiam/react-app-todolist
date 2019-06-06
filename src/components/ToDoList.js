@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/ToDoList.css";
-const md5 = require("md5");
+import ListItem from "./ListItem.js";
 
 class ToDoList extends React.Component {
   toggleHandler = event => {
@@ -17,20 +17,16 @@ class ToDoList extends React.Component {
   };
 
   render() {
-    const toDoListArray = this.props.toDoList;
-    const JSXToDoList = toDoListArray.map(todo => (
-      <li className={this.props.className} key={md5(todo)}>
-        {todo}
-      </li>
-    ));
-
     return (
       <ul
         onClick={this.toggleHandler}
         onMouseOver={this.mouseOverHandler}
         onMouseOut={this.mouseOutHandler}
       >
-        {JSXToDoList}
+        <ListItem
+          toDoList={this.props.toDoList}
+          className={this.props.className}
+        />
       </ul>
     );
   }
