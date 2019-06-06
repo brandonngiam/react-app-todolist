@@ -1,0 +1,10 @@
+ul {
+  padding: 2em 0 0 0;
+  margin-left: 1em;
+}
+
+.to-do_list {
+  list-style-type: circle;
+  padding: 1rem 0;
+  font-size: 2em;
+}
